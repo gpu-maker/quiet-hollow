@@ -17,31 +17,26 @@
   </div>
 </header>
 
-<main>
-  <section id="map">
-    <img src="https://shorturl.at/iQxqkg" id="mapImage">
-    <canvas id="fog"></canvas>
-  </section>
+<div id="game">
+  <div id="map"></div>
 
-  <section id="game">
+  <div id="scene">
     <img id="sceneImage">
-    <div id="text"></div>
+    <p id="text"></p>
     <div id="choices"></div>
-  </section>
+  </div>
 
-  <section id="inventory">
+  <aside>
     <h3>Inventory</h3>
-    <ul id="items"></ul>
-  </section>
-</main>
+    <ul id="inventory"></ul>
 
-<section id="endingMenu" hidden>
-  <h2>ENDINGS UNLOCKED</h2>
-  <ul id="endingList"></ul>
-</section>
+    <h3>Endings</h3>
+    <ul id="endingMenu"></ul>
+  </aside>
+</div>
 
-<audio id="whisper" src="audio/whisper1.mp3" loop></audio>
-<audio id="static" src="audio/static.mp3" loop></audio>
+<audio id="ambient" loop></audio>
+<audio id="voice"></audio>
 
 <script src="script.js"></script>
 </body>
