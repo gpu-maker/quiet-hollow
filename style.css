@@ -1,0 +1,52 @@
+body {
+  background: black;
+  color: #ddd;
+  font-family: monospace;
+  margin: 0;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+#stats span {
+  margin-right: 15px;
+}
+
+main {
+  display: flex;
+}
+
+#map {
+  position: relative;
+}
+
+#fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sceneImage {
+  width: 100%;
+  filter: contrast(1.1);
+}
+
+#choices button {
+  display: block;
+  margin: 5px 0;
+  background: black;
+  color: #ccc;
+  border: 1px solid #555;
+}
+
+.low-sanity {
+  animation: glitch 0.15s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+}
