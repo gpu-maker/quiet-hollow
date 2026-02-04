@@ -1,55 +1,66 @@
 body {
-  background: black;
-  color: #ddd;
+  background:#000;
+  color:#e0e0e0;
   font-family: monospace;
-  margin: 0;
+  margin:0;
 }
 
 header {
-  padding: 10px;
-  border-bottom: 1px solid #444;
+  padding:10px;
+  background:#050505;
+  text-align:center;
 }
 
-#stats span {
-  margin-right: 15px;
-}
-
-main {
-  display: flex;
+#game {
+  display:grid;
+  grid-template-columns: 200px 1fr 200px;
 }
 
 #map {
-  position: relative;
+  background:#111;
+  padding:10px;
 }
 
-#fog {
-  position: absolute;
-  top: 0;
-  left: 0;
+.map-tile {
+  padding:5px;
+  margin:3px 0;
+  background:#222;
+  cursor:pointer;
 }
 
-#sceneImage {
-  width: 100%;
+.map-tile.fog {
+  background:#000;
+  color:#000;
+}
+
+#scene img {
+  width:100%;
   filter: contrast(1.1);
 }
 
 #choices button {
-  display: block;
-  margin: 5px 0;
-  background: black;
-  color: #ccc;
-  border: 1px solid #555;
+  display:block;
+  width:100%;
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+  margin:5px 0;
 }
 
 .low-sanity {
-  animation: glitch 0.15s infinite;
+  animation: glitch 0.3s infinite;
 }
 
 @keyframes glitch {
   0% { transform: translate(0); }
-  20% { transform: translate(-2px, 1px); }
-  40% { transform: translate(2px, -1px); }
+  50% { transform: translate(2px,-2px); }
+  100% { transform: translate(-2px,2px); }
 }
-#sceneImage {
-  filter: grayscale(40%) contrast(120%) brightness(90%);
+
+#overlay {
+  pointer-events:none;
+  position:fixed;
+  inset:0;
+  background:url("assets/images/static.gif");
+  opacity:0;
 }
