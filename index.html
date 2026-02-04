@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QUIET HOLLOW</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="overlay"></div>
+
+<header>
+  <h1>QUIET HOLLOW</h1>
+  <div id="stats">
+    <span>Health: <span id="health">100</span></span>
+    <span>Sanity: <span id="sanity">100</span></span>
+  </div>
+</header>
+
+<main>
+  <section id="map">
+    <img src="images/map.png" id="mapImage">
+    <canvas id="fog"></canvas>
+  </section>
+
+  <section id="game">
+    <img id="sceneImage">
+    <div id="text"></div>
+    <div id="choices"></div>
+  </section>
+
+  <section id="inventory">
+    <h3>Inventory</h3>
+    <ul id="items"></ul>
+  </section>
+</main>
+
+<section id="endingMenu" hidden>
+  <h2>ENDINGS UNLOCKED</h2>
+  <ul id="endingList"></ul>
+</section>
+
+<audio id="whisper" src="audio/whisper1.mp3" loop></audio>
+<audio id="static" src="audio/static.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
