@@ -50,3 +50,6 @@ main {
   20% { transform: translate(-2px, 1px); }
   40% { transform: translate(2px, -1px); }
 }
+#sceneImage {
+  filter: grayscale(40%) contrast(120%) brightness(90%);
+}
